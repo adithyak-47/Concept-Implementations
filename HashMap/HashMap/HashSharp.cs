@@ -63,7 +63,7 @@ internal class HashSharp<K, V>
 
     private static int Hash(int hash, int capacity)
     {
-        return (int)((uint)hash & (uint)capacity);
+        return (int)((uint)hash % (uint)capacity);
     }
 
     private void Resize()
